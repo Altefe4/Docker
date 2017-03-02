@@ -1,13 +1,13 @@
-FROM erlang:v1
+FROM 10.64.88.16/erlang:v1
 
 MAINTAINER Cuenca Inteligente 
 
 ADD ./start.sh /start.sh
 
 ENV EMQ_VERSION=v2.1 
-ENV EMQ_NAME=container_name
-ENV EMQ_HOST=container_IP
-ENV EMQ_NODE_NAME=${EMQ_NAME}@${EMQ_HOST}
+ENV ADMIN_DASH_USER=oiot
+ENV ADMIN_DASH_PASS=oiot
+
 ENV EMQ_NODE_COOKIE=emq_dist_cookie
 ENV EMQ_PROCESS_LIMIT=2097152
 ENV EMQ_MAX_PORTS=1048576
@@ -85,4 +85,8 @@ VOLUME ["/opt/emqttd/log", "/opt/emqttd/data", "/opt/emqttd/plugins", "/opt/emqt
 # - 4369 for port mapping
 # - 6000-6999 for distributed node
 
-EXPOSE 1883 8883 8083 8084 18083 4369 6000-6999
+#DESARROLLO
+#EXPOSE 1883 8883 8083 8084 18083 4369 6000-6999
+
+#PRODUCCION
+EXPOSE 1883 8883 18083 

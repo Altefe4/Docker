@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-MAINTAINER Cuenca Inteligente
+MAINTAINER Cuenca Inteligente <cuancainteligentedesarrollo@Mail.antel.com.uy>
 
 RUN apk update
 

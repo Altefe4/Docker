@@ -195,6 +195,14 @@ done
 
 echo '['$(date -u +"%Y-%m-%dT%H:%M:%SZ")']:emqttd start'
 
+#Usuarios del DASHBOARD
+#Agrego el usuario del Dashboard
+echo "Quito el usuario admin del Dashboard"
+/opt/emqttd/bin/emqttd_ctl admins del admin
+
+echo "Agrego el usuario:" $ADMIN_DASH_USER
+/opt/emqttd/bin/emqttd_ctl admins add $ADMIN_DASH_USER $ADMIN_DASH_PASS administrator
+
 # monitor emqttd is running, or the docker must stop to let docker PaaS know
 # warning: never use infinite loops such as `` while true; do sleep 1000; done`` here
 #          you must let user know emqtt crashed and stop this container,
