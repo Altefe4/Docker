@@ -1,8 +1,6 @@
-FROM alpine:3.4
+FROM alpine:3.5
 
 MAINTAINER Cuenca Inteligente
-
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories 
 
 RUN apk update
 
@@ -14,7 +12,7 @@ RUN	apk --no-cache add \
 	erlang-gs \
 	erlang-observer \
 	erlang-ssh \
-	erlang-ose \
+	#erlang-ose \
 	erlang-cosfiletransfer \
 	erlang-runtime-tools \
 	erlang-os-mon \
@@ -41,10 +39,10 @@ RUN	apk --no-cache add \
 	erlang-hipe \
 	erlang-ic \
 	erlang-eunit \
-	erlang-webtool \
+	#erlang-webtool \
 	erlang-mnesia \
 	erlang-erl-interface \
-	erlang-test-server \
+	#erlang-test-server \
 	erlang-sasl \
 	erlang-jinterface \
 	erlang-kernel \

@@ -11,4 +11,4 @@ Este docker es utilizado por:
 
 ====
 
-docker build --build-arg http_proxy=http://<ip_proxy>:3128 -t <DOCKER_REGISTRY>>erlang:v0 .
+docker build --build-arg http_proxy=http://<ip_proxy>:3128 -t <DOCKER_REGISTRY>erlang:v1 .
